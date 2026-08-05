@@ -3,894 +3,348 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Samir El Taibe — Comptabilité, Finance | CV</title>
-<meta name="description" content="Samir El Taibe, comptable et coordinateur financier à Bruxelles. Comptabilité générale, clôtures, reporting, TVA, SAP FI, Adfinity.">
+<title>Samir El Taibe · De la comptabilité à la décision</title>
+<meta name="description" content="Portfolio de Samir El Taibe, coordinateur financier et administratif à Bruxelles. Comptabilité générale, clôtures, reporting, budgets, TVA, amélioration des processus.">
 <meta name="author" content="Samir El Taibe">
-<meta name="theme-color" content="#E1352A">
+<meta property="og:title" content="Samir El Taibe · De la comptabilité à la décision">
+<meta property="og:description" content="Le chiffre comme point de départ, pas comme une fin en soi.">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#111114">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
-<style>
-:root{
-  --noir:#111114;--papier:#F4F3EF;--papier-2:#FFFFFF;
-  --encre:#15151A;--encre-doux:#5E5E68;--trait:#D5D3CC;
-  --acc:#E1352A;--acc-2:#A5201A;--acc-txt:#FFFFFF;
-  --gut:clamp(1.1rem,4vw,2.6rem);--maxw:1120px;--skew:-6deg;
-}
-body[data-angle="fin"]{--acc:#F0B31C;--acc-2:#8F6702;--acc-txt:#15151A}
-body[data-angle="hum"]{--acc:#1FB0C4;--acc-2:#0C7A88;--acc-txt:#FFFFFF}
-
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--papier);color:var(--encre);font-family:"Source Serif 4",Georgia,serif;font-size:16px;line-height:1.55;font-variant-numeric:tabular-nums;overflow-x:hidden}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
-a{color:var(--acc-2);text-decoration:none;border-bottom:1px solid currentColor}
-a:hover{color:var(--acc)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
-ul{margin:0;padding:0;list-style:none}
-canvas{max-width:100%}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--encre-doux);margin:0}
-.sk{transform:skewX(var(--skew))}
-.sk>span{display:inline-block;transform:skewX(calc(-1*var(--skew)))}
-
-/* ---------- barre ---------- */
-.topbar{position:sticky;top:0;z-index:40;background:var(--noir);border-bottom:3px solid var(--acc);transition:border-color .35s}
-.topbar__in{display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:.55rem 0;flex-wrap:wrap}
-.brand{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:1.15rem;letter-spacing:.02em;color:#fff;text-transform:uppercase;border:none;transform:skewX(var(--skew))}
-.brand:hover{color:var(--acc)}
-.tools{display:flex;gap:.4rem}
-.btn{font-family:"IBM Plex Mono",monospace;font-size:.7rem;border:1px solid #4A4A55;color:#E7E7EA;background:transparent;padding:.42rem .7rem;cursor:pointer;text-decoration:none;display:inline-block;transform:skewX(var(--skew))}
-.btn>span{display:inline-block;transform:skewX(calc(-1*var(--skew)))}
-.btn:hover{background:var(--acc);border-color:var(--acc);color:var(--acc-txt)}
-.angles{display:flex;gap:.35rem;flex-wrap:wrap}
-.angle{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;background:transparent;color:#9A9AA6;border:1px solid #3A3A44;padding:.42rem .85rem;cursor:pointer;transform:skewX(var(--skew));transition:background .2s,color .2s,border-color .2s}
-.angle>span{display:inline-block;transform:skewX(calc(-1*var(--skew)))}
-.angle:hover{color:#fff;border-color:#7A7A88}
-.angle[aria-selected="true"]{border-color:transparent}
-.angle[data-set="cpt"][aria-selected="true"]{background:#E1352A;color:#fff}
-.angle[data-set="fin"][aria-selected="true"]{background:#F0B31C;color:#15151A}
-.angle[data-set="hum"][aria-selected="true"]{background:#1FB0C4;color:#fff}
-
-/* ---------- hero ---------- */
-.hero{position:relative;background:var(--noir);color:#F2F2F4;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(currentColor .9px,transparent .9px);background-size:9px 9px;color:var(--acc);opacity:.16;transition:color .35s}
-.hero::after{content:"";position:absolute;top:-15%;right:-18%;width:52%;height:135%;background:var(--acc);opacity:.14;transform:skewX(-13deg);transition:background .35s}
-.hero__in{position:relative;z-index:2;padding:clamp(1.8rem,5vw,3.2rem) 0 1.3rem;display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(1.1rem,3.2vw,2.2rem);align-items:center}
-@media (max-width:560px){.hero__in{grid-template-columns:1fr}}
-.portrait{position:relative;width:clamp(128px,19vw,206px);aspect-ratio:1;background:var(--acc);transform:skewX(var(--skew));overflow:hidden;transition:background .35s}
-.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;opacity:0;transform:skewX(calc(-1*var(--skew))) scale(1.28);filter:grayscale(1) contrast(1.08);transition:opacity .45s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
-body[data-angle="cpt"] .portrait .p-cpt,
-body[data-angle="fin"] .portrait .p-fin,
-body[data-angle="hum"] .portrait .p-hum{opacity:1;transform:skewX(calc(-1*var(--skew))) scale(1.16) translate(var(--px,0),var(--py,0))}
-.portrait__fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:3rem;color:#fff}
-h1{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:clamp(2.6rem,9vw,5.4rem);line-height:.86;text-transform:uppercase;margin:.15rem 0 0;transform:skewX(var(--skew))}
-h1 em{font-style:normal;color:var(--acc);transition:color .35s}
-.role{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:clamp(1.05rem,2.7vw,1.6rem);text-transform:uppercase;letter-spacing:.05em;margin:.55rem 0 .15rem;color:var(--acc);transition:color .35s}
-.tagline{margin:0;color:#C9C9D2;max-width:56ch;font-size:.98rem}
-.hero__contact{margin-top:.7rem;font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:#9A9AA6;display:flex;gap:.9rem;flex-wrap:wrap}
-.hero__contact a{color:#E7E7EA;border-bottom-color:#4A4A55}
-.hero__contact a:hover{color:var(--acc);border-bottom-color:var(--acc)}
-.tel{display:none}
-.kpis{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #2C2C34}
-@media (max-width:700px){.kpis{grid-template-columns:repeat(2,1fr)}}
-.kpi{padding:.85rem .2rem .95rem;border-left:1px solid #2C2C34}
-.kpi:first-child{border-left:none}
-@media (max-width:700px){.kpi:nth-child(3){border-left:none}.kpi:nth-child(n+3){border-top:1px solid #2C2C34}}
-.kpi__n{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:clamp(1.7rem,4.6vw,2.5rem);line-height:1;color:#fff;display:block;padding-left:.7rem;transform:skewX(var(--skew))}
-.kpi__l{font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#8A8A96;display:block;padding:.3rem .7rem 0}
-
-/* ---------- sections ---------- */
-main{padding:clamp(1.8rem,4.5vw,2.8rem) 0 4rem;display:flex;flex-direction:column}
-.sec{margin-bottom:2.5rem}
-.head{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin-bottom:1.05rem}
-.head h2{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:1.35rem;text-transform:uppercase;letter-spacing:.05em;margin:0;background:var(--noir);color:#fff;padding:.2rem .8rem .28rem;transform:skewX(var(--skew))}
-.head h2>span{display:inline-block;transform:skewX(calc(-1*var(--skew)))}
-.head .rule{flex:1 1 60px;height:3px;background:var(--acc);transition:background .35s}
-.lead{margin:0 0 .85rem;max-width:72ch;font-size:1.03rem}
-
-/* ---------- périmètre (cpt) ---------- */
-.cycles{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:.9rem}
-.cycle{border:2px solid var(--encre);background:var(--papier-2);padding:.85rem .95rem;position:relative}
-.cycle::before{content:"";position:absolute;top:0;left:0;width:100%;height:5px;background:var(--acc);transition:background .35s}
-.cycle b{display:block;font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:1.12rem;text-transform:uppercase;letter-spacing:.03em;margin:.3rem 0 .18rem}
-.cycle p{margin:0;font-size:.9rem;color:var(--encre-doux)}
-
-/* ---------- chaîne (fin) ---------- */
-.chain{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.75rem}
-.step{background:var(--papier-2);border:2px solid var(--encre);padding:.85rem .9rem;position:relative}
-.step .n{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:1.6rem;line-height:1;color:var(--acc);display:block;transition:color .35s}
-.step b{display:block;font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.03em;margin:.15rem 0 .2rem}
-.step p{margin:0;font-size:.88rem;color:var(--encre-doux)}
-.step::after{content:"";position:absolute;right:-.62rem;top:50%;width:.75rem;height:2px;background:var(--encre);z-index:2}
-.step:last-child::after{display:none}
-@media (max-width:640px){.step::after{display:none}}
-
-/* ---------- méthode (hum) ---------- */
-.traits{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:.9rem}
-.trait{border:2px solid var(--encre);background:var(--papier-2);padding:.9rem 1rem;border-left:6px solid var(--acc);transition:border-color .35s}
-.trait b{display:block;font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:1.13rem;text-transform:uppercase;letter-spacing:.03em;margin-bottom:.2rem}
-.trait p{margin:0;font-size:.92rem;color:var(--encre-doux)}
-.asks{margin-top:1.3rem}
-.asks li{position:relative;padding-left:1.6rem;margin-bottom:.42rem;font-size:.98rem}
-.asks li::before{content:"";position:absolute;left:0;top:.42em;width:.85rem;height:.85rem;background:var(--acc);transform:skewX(var(--skew));transition:background .35s}
-.likes{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.45rem}
-.like{font-family:"IBM Plex Mono",monospace;font-size:.73rem;border:1px solid var(--acc);color:var(--acc-2);padding:.3rem .55rem;transform:skewX(var(--skew));transition:border-color .35s,color .35s}
-.like>span{display:inline-block;transform:skewX(calc(-1*var(--skew)))}
-
-/* ---------- cartes graphiques ---------- */
-.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:1.2rem}
-.card{background:var(--papier-2);border:2px solid var(--encre);padding:1rem;box-shadow:5px 5px 0 var(--acc);transition:box-shadow .35s}
-.card h3{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.04em;margin:0 0 .1rem}
-.card p.hint{font-size:.82rem;color:var(--encre-doux);margin:.1rem 0 .7rem}
-.chart-box{position:relative;height:232px}
-
-/* ---------- parcours ---------- */
-.entry{display:grid;grid-template-columns:8.4rem minmax(0,1fr);gap:1.15rem;padding:.95rem 0;border-bottom:1px solid var(--trait)}
-.entry:last-child{border-bottom:none}
-@media (max-width:560px){.entry{grid-template-columns:1fr;gap:.3rem}}
-.entry__period{font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--encre-doux);line-height:1.7;padding-top:.25rem}
-.entry__period b{display:block;color:var(--encre);font-weight:600}
-.entry h3{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:1.28rem;text-transform:uppercase;letter-spacing:.03em;margin:0;line-height:1.05}
-.entry__org{margin:.15rem 0 .5rem;color:var(--acc-2);font-size:.91rem;transition:color .35s}
-.entry li{position:relative;padding-left:1.05rem;margin-bottom:.26rem}
-.entry li::before{content:"";position:absolute;left:0;top:.62em;width:.5rem;height:.5rem;background:var(--acc);transform:skewX(var(--skew));transition:background .35s}
-
-/* ---------- réalisations ---------- */
-.ach{display:flex;align-items:baseline;gap:.6rem;padding:.55rem 0;border-bottom:1px dotted var(--trait)}
-.ach:last-child{border-bottom:none}
-.ach__txt{flex:1 1 auto}
-.ach__val{flex:0 0 auto;font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:1.3rem;color:var(--acc);white-space:nowrap;transition:color .35s}
-
-/* ---------- chronologie ---------- */
-.tl__scale{position:relative;height:1.25rem;border-bottom:2px solid var(--encre);margin-bottom:.55rem}
-.tl__year{position:absolute;top:0;transform:translateX(-50%);font-family:"IBM Plex Mono",monospace;font-size:.65rem;color:var(--encre-doux)}
-.tl__row{position:relative;height:1.7rem;margin-bottom:.26rem}
-.tl__bar{position:absolute;top:.15rem;height:1.3rem;min-width:9px;display:flex;align-items:center;padding:0 .5rem;font-family:"IBM Plex Mono",monospace;font-size:.66rem;white-space:nowrap;overflow:hidden;transform:skewX(var(--skew))}
-.tl__bar>span{display:inline-block;transform:skewX(calc(-1*var(--skew)))}
-.tl__bar.exp{background:var(--noir);color:#fff}
-.tl__bar.form{background:var(--trait);color:var(--encre)}
-.tl__bar.tr{background:transparent;border:1px dashed var(--encre-doux);color:var(--encre-doux)}
-.tl__legend{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.6rem}
-.tl__legend span{font-family:"IBM Plex Mono",monospace;font-size:.67rem;color:var(--encre-doux);display:flex;align-items:center;gap:.35rem}
-.dot{width:.6rem;height:.6rem;display:inline-block}
-.dot.exp{background:var(--noir)}.dot.form{background:var(--trait)}.dot.tr{border:1px dashed var(--encre-doux)}
-
-/* ---------- annexes ---------- */
-.annex{display:grid;grid-template-columns:repeat(auto-fit,minmax(236px,1fr));gap:1.5rem}
-.annex h3{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--encre-doux);font-weight:500;margin:0 0 .55rem;border-bottom:2px solid var(--encre);padding-bottom:.25rem}
-.chips{display:flex;flex-wrap:wrap;gap:.32rem}
-.chip{font-family:"IBM Plex Mono",monospace;font-size:.71rem;border:1px solid var(--encre);padding:.3rem .5rem;background:var(--papier-2)}
-.chip.key{background:var(--encre);color:var(--papier)}
-.lang{display:flex;justify-content:space-between;gap:1rem;padding:.32rem 0;border-bottom:1px dotted var(--trait);font-size:.92rem}
-.lang span:last-child{font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--encre-doux)}
-.edu{padding:.5rem 0;border-bottom:1px solid var(--trait)}
-.edu:last-child{border-bottom:none}
-.edu b{display:block;font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:1.06rem;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
-.edu span{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--encre-doux)}
-
-footer{background:var(--noir);color:#8A8A96;border-top:3px solid var(--acc);transition:border-color .35s}
-.footer__in{padding:1.2rem 0;font-family:"IBM Plex Mono",monospace;font-size:.72rem;display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between}
-footer a{color:#E7E7EA;border-bottom-color:#4A4A55}
-
-/* ---------- filtrage + ordre par angle ---------- */
-[data-for]{display:none}
-body[data-angle="cpt"] [data-for~="cpt"],
-body[data-angle="fin"] [data-for~="fin"],
-body[data-angle="hum"] [data-for~="hum"]{display:revert}
-body[data-angle="cpt"] li[data-for~="cpt"],
-body[data-angle="fin"] li[data-for~="fin"],
-body[data-angle="hum"] li[data-for~="hum"]{display:flex}
-body[data-angle="cpt"] .entry li[data-for~="cpt"],
-body[data-angle="fin"] .entry li[data-for~="fin"],
-body[data-angle="hum"] .entry li[data-for~="hum"],
-body[data-angle="cpt"] .asks li[data-for~="cpt"],
-body[data-angle="hum"] .asks li[data-for~="hum"]{display:list-item}
-body[data-angle="cpt"] .chip[data-for~="cpt"],
-body[data-angle="fin"] .chip[data-for~="fin"],
-body[data-angle="hum"] .chip[data-for~="hum"]{display:inline-block}
-body[data-angle="cpt"] .sec{order:var(--o-cpt,99)}
-body[data-angle="fin"] .sec{order:var(--o-fin,99)}
-body[data-angle="hum"] .sec{order:var(--o-hum,99)}
-
-/* ---------- mouvement ---------- */
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
-.reveal.in{opacity:1;transform:none}
-#wipe{position:fixed;inset:-25% -40%;background:var(--acc);z-index:60;transform:skewX(-13deg) translateX(-150%);pointer-events:none}
-#wipe.go{animation:slash .62s cubic-bezier(.7,0,.25,1) forwards}
-@keyframes slash{0%{transform:skewX(-13deg) translateX(-150%)}55%{transform:skewX(-13deg) translateX(0)}100%{transform:skewX(-13deg) translateX(150%)}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1!important;transform:none!important;transition:none}.iline,.iverb,.iportrait{opacity:1!important;transform:none!important;transition:none}#intro,#doors{transition:none}#wipe{display:none}*{animation:none!important}}
-
-/* ---------- intro et portes ---------- */
-#intro,#doors{position:fixed;inset:0;background:#0C0C0F;color:#F2F2F4;transition:opacity .5s ease}
-#intro{z-index:80;display:flex;align-items:center;justify-content:center;overflow:hidden}
-#doors{z-index:70;display:flex;flex-direction:column}
-#intro.out,#doors.out{opacity:0;pointer-events:none}
-#intro.done,#doors.done{display:none}
-#stars{position:absolute;inset:0}
-.intro__stage{position:relative;z-index:2;text-align:center;padding:0 1rem}
-.iline{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:clamp(3rem,14vw,7.2rem);line-height:.9;text-transform:uppercase;color:#fff;opacity:0;transform:translateY(26px) skewX(var(--skew));transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.2,1)}
-.iline.em{color:#E1352A}
-.iline.on{opacity:1;transform:translateY(0) skewX(var(--skew))}
-.iverb{font-family:"IBM Plex Mono",monospace;font-size:clamp(.72rem,2.2vw,.95rem);letter-spacing:.34em;text-transform:uppercase;color:#9A9AA6;margin:.55rem 0 0;opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
-.iverb.on{opacity:1;transform:none}
-.iportrait{width:clamp(116px,20vw,180px);aspect-ratio:1;margin:1.7rem auto 0;background:#E1352A;transform:translateY(20px) skewX(var(--skew));overflow:hidden;opacity:0;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
-.iportrait.on{opacity:1;transform:translateY(0) skewX(var(--skew))}
-.iportrait img{width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:grayscale(1) contrast(1.08);transform:skewX(calc(-1*var(--skew))) scale(1.18)}
-.intro__skip{position:absolute;bottom:1.2rem;right:1.4rem;z-index:3}
-.doors__t{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#9A9AA6;text-align:center;margin:0;padding:1.5rem 1rem .9rem}
-.doors__grid{flex:1;display:grid;grid-template-columns:repeat(3,1fr)}
-@media (max-width:760px){.doors__grid{grid-template-columns:1fr}}
-.door{position:relative;background:#111114;border:none;border-left:1px solid #2C2C34;color:#fff;cursor:pointer;display:flex;align-items:flex-end;padding:2rem 1.5rem;text-align:left;overflow:hidden}
-.door:first-child{border-left:none}
-.door::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--dc);z-index:2}
-.door::after{content:"";position:absolute;inset:0;background:var(--dc);opacity:0;transform:skewX(-13deg) translateX(-115%);transition:transform .4s cubic-bezier(.2,.7,.2,1),opacity .4s}
-.door:hover::after,.door:focus-visible::after{opacity:.18;transform:skewX(-13deg) translateX(0)}
-.door img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;opacity:.18;filter:grayscale(1) contrast(1.05);pointer-events:none;transition:opacity .4s,transform .6s}
-.door:hover img{opacity:.3;transform:scale(1.03)}
-.door__in{position:relative;z-index:2}
-.door__in b{display:block;font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:clamp(1.7rem,4.2vw,3rem);text-transform:uppercase;letter-spacing:.02em;transform:skewX(var(--skew))}
-.door__in small{display:block;font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:#B9B9C2;margin-top:.45rem;max-width:32ch;line-height:1.6}
-.doors__f{text-align:center;margin:0;padding:1rem}
-.linkish{background:none;border:none;border-bottom:1px solid #4A4A55;color:#9A9AA6;font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:0 0 .15rem;cursor:pointer}
-.linkish:hover{color:#fff;border-color:#fff}
-
-/* ---------- ambiances par univers ---------- */
-body{transition:background-color .35s}
-body[data-angle="cpt"] main{background-image:repeating-linear-gradient(0deg,transparent 0 27px,rgba(20,21,26,.05) 27px 28px)}
-body[data-angle="fin"] main{background-image:repeating-linear-gradient(115deg,transparent 0 44px,rgba(20,21,26,.045) 44px 45px)}
-body[data-angle="hum"]{--papier:#F6F1E7;--papier-2:#FFFDF7;background:#F6F1E7}
-body[data-angle="hum"] .head h2{font-family:"Source Serif 4",Georgia,serif;font-weight:600;text-transform:none;letter-spacing:0;transform:none}
-body[data-angle="hum"] .head h2>span{transform:none}
-body[data-angle="hum"] .lead{font-size:1.1rem;line-height:1.68}
-
-/* ---------- études de cas ---------- */
-.case{border:2px solid var(--encre);background:var(--papier-2);padding:1.05rem 1.15rem;box-shadow:5px 5px 0 var(--acc);transition:box-shadow .35s;margin-bottom:1.1rem}
-.case:last-child{margin-bottom:0}
-.case h3{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:1.25rem;text-transform:uppercase;letter-spacing:.03em;margin:0 0 .6rem;display:flex;gap:.6rem;align-items:baseline;flex-wrap:wrap}
-.case h3 .res{font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--acc-2);letter-spacing:.06em;transition:color .35s}
-.case__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:.85rem}
-.case__cell b{display:block;font-family:"IBM Plex Mono",monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--encre-doux);font-weight:500;margin-bottom:.22rem}
-.case__cell p{margin:0;font-size:.9rem}
-.ba{display:flex;gap:.7rem;align-items:stretch;margin-top:.95rem;flex-wrap:wrap}
-.ba__col{flex:1 1 210px;border:1px dashed var(--encre-doux);padding:.65rem .8rem}
-.ba__col.b{border:2px solid var(--acc);transition:border-color .35s}
-.ba__col h4{font-family:"IBM Plex Mono",monospace;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--encre-doux);font-weight:500;margin:0 0 .35rem}
-.ba__col li{position:relative;padding-left:.9rem;font-size:.85rem;margin-bottom:.2rem}
-.ba__col li::before{content:"";position:absolute;left:0;top:.6em;width:.4rem;height:1px;background:var(--encre-doux)}
-.ba__arrow{align-self:center;font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:1.7rem;color:var(--acc);transition:color .35s}
-
-/* ---------- impression ---------- */
-@media print{
-  @page{size:A4;margin:12mm}
-  body{background:#fff;color:#000;font-size:10.1pt;line-height:1.34;overflow:visible}
-  .topbar,.charts,#wipe,#intro,#doors,.no-print{display:none!important}
-  .tel{display:inline!important}
-  .reveal{opacity:1!important;transform:none!important}
-  .hero,footer{background:#fff;color:#000;border:none}
-  .hero::before,.hero::after{display:none}
-  .card{box-shadow:none}
-  .hero__in{padding:0 0 .4rem}
-  .wrap{padding:0;max-width:none}
-  h1,h1 em,.role,.head h2,.kpi__n,.entry h3,.edu b,.trait b,.cycle b,.step b,.step .n,.ach__val{color:#000!important;background:none!important}
-  h1{font-size:25pt}
-  .hero__contact,.hero__contact a,.tagline,.kpi__l{color:#000}
-  .kpis,.kpi{border-color:#000}
-  main{padding:.5rem 0 0}
-  .sec{margin-bottom:.9rem;break-inside:avoid}
-  .entry{break-inside:avoid;padding:.4rem 0}
-  .head .rule{background:#000;height:2px}
-  a{color:#000;border:none}
-  .chip,.card,.trait,.like,.cycle,.step{background:#fff;color:#000;border-color:#000}
-  .chip.key{background:#fff;color:#000;font-weight:600}
-  .case{box-shadow:none}
-  .ba__col.b{border-color:#000}
-  .ba__arrow,.case h3 .res{color:#000}
-  .cycle::before{background:#000}
-  .entry li::before,.asks li::before{background:#000}
-  .tl__bar.exp{background:#333;color:#fff}
-  .tl__bar.form{background:#c8c8c8;color:#000}
-  *{transform:none!important}
-}
-</style>
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Samir El Taibe","jobTitle":"Coordinateur financier et administratif","address":{"@type":"PostalAddress","addressLocality":"Bruxelles","addressCountry":"BE"},"email":"mailto:eltaibesamir@gmail.com","sameAs":["https://www.linkedin.com/in/samir-eltaibe"]}
+</script>
 </head>
 <body data-angle="cpt">
-
+<a class="skip" href="#contenu" data-i18n="nav.skip">Aller au contenu</a>
 <div id="wipe" aria-hidden="true"></div>
-
-<div id="intro" role="dialog" aria-label="Introduction">
-  <canvas id="stars" aria-hidden="true"></canvas>
-  <div class="intro__stage">
-    <div class="iline" data-seq>Samir</div>
-    <div class="iline em" data-seq>El Taibe</div>
-    <p class="iverb" data-seq>Comprendre</p>
-    <p class="iverb" data-seq>Sécuriser</p>
-    <p class="iverb" data-seq>Créer de la valeur</p>
-    <div class="iportrait" data-seq><img src="photo.jpg" alt="" onerror="this.parentNode.style.display='none'"></div>
-  </div>
-  <button class="btn intro__skip" type="button" id="skip"><span>Passer →</span></button>
-</div>
-
-<div id="doors" role="dialog" aria-label="Choisissez votre angle">
-  <p class="doors__t">Chapitre 02 · Choisissez votre angle</p>
-  <div class="doors__grid">
-    <button class="door" type="button" data-set="cpt" style="--dc:#E1352A">
-      <img src="photo-cpt.jpg" alt="" aria-hidden="true" onerror="this.remove()">
-      <span class="door__in"><b>Le Comptable</b><small>Rigueur, clôtures, comptes justifiés. Chaque détail compte.</small></span>
-    </button>
-    <button class="door" type="button" data-set="fin" style="--dc:#F0B31C">
-      <img src="photo-fin.jpg" alt="" aria-hidden="true" onerror="this.remove()">
-      <span class="door__in"><b>Le Financier</b><small>Analyser, anticiper, transformer les données en décisions.</small></span>
-    </button>
-    <button class="door" type="button" data-set="hum" style="--dc:#1FB0C4">
-      <img src="photo-hum.jpg" alt="" aria-hidden="true" onerror="this.remove()">
-      <span class="door__in"><b>Samir</b><small>Le parcours, les valeurs, la personne derrière les comptes.</small></span>
-    </button>
-  </div>
-  <p class="doors__f"><button class="linkish" id="quickpdf" type="button">Pressé ? Version imprimable</button></p>
-</div>
 
 <div class="topbar">
   <div class="wrap topbar__in">
-    <a class="brand" href="#top">Samir El Taibe</a>
-    <div class="angles" role="tablist" aria-label="Angle de lecture">
-      <button class="angle" role="tab" data-set="cpt" aria-selected="true"><span>Comptabilité</span></button>
-      <button class="angle" role="tab" data-set="fin" aria-selected="false"><span>Finance</span></button>
-      <button class="angle" role="tab" data-set="hum" aria-selected="false"><span>Savoir-être</span></button>
-    </div>
+    <a class="brand" href="#contenu">SE&nbsp;El&nbsp;Taibe</a>
+    <nav class="angles" role="tablist" aria-label="Angle de lecture">
+      <button class="angle" role="tab" data-set="cpt" aria-selected="true"><span data-i18n="nav.cpt">Comptabilité</span></button>
+      <button class="angle" role="tab" data-set="fin" aria-selected="false"><span data-i18n="nav.fin">Finance</span></button>
+      <button class="angle" role="tab" data-set="hum" aria-selected="false"><span data-i18n="nav.hum">Samir</span></button>
+    </nav>
     <div class="tools">
-      <a class="btn" href="parcours.html"><span>BPMN</span></a>
-      <button class="btn" type="button" id="print"><span>PDF</span></button>
+      <span class="lang" role="group" aria-label="Langue">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </span>
+      <button class="btn" type="button" id="print"><span data-i18n="nav.print">Imprimer le portfolio</span></button>
     </div>
   </div>
 </div>
 
-<header class="hero" id="top">
+<header class="hero" id="contenu">
   <div class="wrap hero__in">
-    <div class="portrait" id="portrait">
-      <span class="portrait__fb" id="fb">SE</span>
-      <img class="p-cpt" src="photo-cpt.jpg" alt="Samir El Taibe" onload="window.__pOK&&window.__pOK()" onerror="this.remove()">
-      <img class="p-fin" src="photo-fin.jpg" alt="" aria-hidden="true" onload="window.__pOK&&window.__pOK()" onerror="this.remove()">
-      <img class="p-hum" src="photo-hum.jpg" alt="" aria-hidden="true" onload="window.__pOK&&window.__pOK()" onerror="this.remove()">
-    </div>
+    <div class="mono" aria-hidden="true"><b>SE</b></div>
     <div>
-      <p class="eyebrow" style="color:#8A8A96">Bruxelles · Belgique · Disponible</p>
-      <h1>Samir <em>El Taibe</em></h1>
-      <p class="role" data-for="cpt">Comptable · comptabilité générale</p>
-      <p class="role" data-for="fin">Analyste financier · reporting et budgets</p>
-      <p class="role" data-for="hum">La personne derrière les comptes</p>
-      <p class="tagline" data-for="cpt">Deux entités tenues de l'écriture quotidienne aux comptes annuels. Sept cycles couverts, comptes justifiés, audits préparés.</p>
-      <p class="tagline" data-for="fin">De la donnée brute à la décision : consolidation, écarts, tableaux de bord pour la Direction et les pouvoirs subsidiants.</p>
-      <p class="tagline" data-for="hum">Calme quand la clôture chauffe, et pas le dernier à rigoler quand elle est bouclée. Quatre personnes encadrées, trois langues, deux pays.</p>
-      <div class="hero__contact">
+      <p class="eyebrow" style="color:#8A8A96" data-i18n="hero.eyebrow">Samir El Taibe · Coordinateur financier et administratif · Bruxelles</p>
+      <h1 id="titre" data-i18n="hero.h1">DE LA COMPTABILITÉ À LA DÉCISION</h1>
+      <p class="sub" data-i18n="hero.sub">Le chiffre comme point de départ, pas comme une fin en soi.</p>
+      <p class="pres" data-i18n="hero.pres">Financier de formation, spécialisé en comptabilité, je sécurise les comptes, je transforme les données en analyses et je rends l'information utile à la décision.</p>
+      <p class="reperes">
+        <span data-i18n="hero.r1">8+ ans d'expérience</span><span data-i18n="hero.r2">2 entités</span>
+        <span data-i18n="hero.r3">4 collaborateurs encadrés</span><span data-i18n="hero.r4">comptabilité générale</span>
+        <span data-i18n="hero.r5">reporting et budgets</span><span data-i18n="hero.r6">amélioration des processus</span>
+      </p>
+      <p class="cta">
+        <a class="btn primary" href="#etudes"><span data-i18n="hero.cta1">Découvrir les études de cas</span></a>
+        <a class="btn" id="cta-cv" download href="assets/cv/cv-general-ledger-accountant-fr.pdf">Télécharger le CV recommandé : General Ledger Accountant</a>
+      </p>
+      <p class="manifesto" data-i18n="hero.manifesto">Comprendre. Sécuriser. Créer de la valeur.</p>
+      <p class="hero__contact">
         <a href="mailto:eltaibesamir@gmail.com">eltaibesamir@gmail.com</a>
         <a href="https://www.linkedin.com/in/samir-eltaibe" rel="noopener">linkedin.com/in/samir-eltaibe</a>
-        <span class="tel">0491 52 61 20</span>
         <span>Bruxelles</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="wrap dash" data-for="cpt">
+    <h2 data-i18n="dash.cpt.t">Clôture mensuelle, de J+1 à J+8</h2>
+    <ol class="steps">
+      <li data-i18n="dash.s1">Cut-off</li>
+      <li data-i18n="dash.s2">Rapprochements bancaires</li>
+      <li data-i18n="dash.s3">Contrôle GL (AP, AR, immobilisations)</li>
+      <li data-i18n="dash.s4">Analyse des écarts (boucle de correction)</li>
+      <li data-i18n="dash.s5">Régularisations</li>
+      <li data-i18n="dash.s6">Justification des comptes</li>
+      <li data-i18n="dash.s7">Reporting</li>
+    </ol>
+    <p class="etats" data-i18n="dash.etats">États : contrôlé · justifié · reporté</p>
+    <p class="note"><span data-i18n="dash.cpt.note">Illustration de méthode : déroulé type d'une clôture mensuelle sur deux entités. Modélisation BPMN complète sur la page Processus.</span> <a href="parcours.html" data-i18n="dash.cpt.link">Voir la modélisation BPMN</a></p>
+  </div>
+
+  <div class="wrap dash" data-for="fin">
+    <div class="tiles">
+      <div class="tile">
+        <h3 data-i18n="dash.fin.t1">Automatisation du reporting de trésorerie</h3>
+        <div class="ba">
+          <div class="row"><span data-i18n="dash.fin.avant">Avant : plusieurs étapes manuelles</span><span class="bar"><i class="seg"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i></span></div>
+          <div class="row apres"><span data-i18n="dash.fin.apres">Après : actualisation contrôlée</span><span class="bar apres"><i class="seg"></i></span></div>
+        </div>
+        <p class="note"><span data-i18n="dash.fin.l1">Automatisation quasi complète de la production. Représentation schématique.</span> <a href="#etudes" data-i18n="dash.fin.link">Lire l'étude de cas</a></p>
+      </div>
+      <div class="tile">
+        <h3 data-i18n="dash.fin.t2">Budget vs réalisé</h3>
+        <svg viewBox="0 0 300 120" role="img" aria-label="Comparaison budget et réalisé sur quatre postes, données fictives">
+          <g>
+            <rect x="18" y="30" width="16" height="70" fill="#3A3A44"/><rect x="36" y="42" width="16" height="58" fill="currentColor" style="color:var(--acc)"/>
+            <rect x="90" y="50" width="16" height="50" fill="#3A3A44"/><rect x="108" y="46" width="16" height="54" fill="currentColor" style="color:var(--acc)"/>
+            <rect x="162" y="38" width="16" height="62" fill="#3A3A44"/><rect x="180" y="56" width="16" height="44" fill="currentColor" style="color:var(--acc)"/>
+            <rect x="234" y="62" width="16" height="38" fill="#3A3A44"/><rect x="252" y="58" width="16" height="42" fill="currentColor" style="color:var(--acc)"/>
+          </g>
+          <text x="18" y="114" data-i18n="dash.b1">Personnel</text>
+          <text x="90" y="114" data-i18n="dash.b2">Fonctionnement</text>
+          <text x="162" y="114" data-i18n="dash.b3">Projets</text>
+          <text x="234" y="114" data-i18n="dash.b4">Investissements</text>
+        </svg>
+        <p class="fict" data-i18n="dash.fin.fict">Démonstration avec données fictives.</p>
       </div>
     </div>
   </div>
-  <div class="wrap">
-    <!-- chiffres clés propres à chaque angle -->
-    <div class="kpis" data-for="cpt">
-      <div class="kpi"><span class="kpi__n" data-count="8" data-suffix="+">0</span><span class="kpi__l">Années d'expérience</span></div>
-      <div class="kpi"><span class="kpi__n" data-count="7">0</span><span class="kpi__l">Cycles comptables couverts</span></div>
-      <div class="kpi"><span class="kpi__n" data-count="2">0</span><span class="kpi__l">Entités tenues</span></div>
-      <div class="kpi"><span class="kpi__n" data-count="6">0</span><span class="kpi__l">Logiciels comptables</span></div>
-    </div>
-    <div class="kpis" data-for="fin">
-      <div class="kpi"><span class="kpi__n" data-count="97" data-prefix="−" data-suffix=" %">0</span><span class="kpi__l">Temps de reporting trésorerie</span></div>
-      <div class="kpi"><span class="kpi__n" data-count="30" data-prefix="−" data-suffix=" %">0</span><span class="kpi__l">Temps de traitement</span></div>
-      <div class="kpi"><span class="kpi__n" data-count="10" data-prefix="−" data-suffix=" %">0</span><span class="kpi__l">Durée de clôture</span></div>
-      <div class="kpi"><span class="kpi__n" data-count="2">0</span><span class="kpi__l">Entités consolidées</span></div>
-    </div>
-    <div class="kpis" data-for="hum">
-      <div class="kpi"><span class="kpi__n" data-count="4">0</span><span class="kpi__l">Personnes encadrées</span></div>
-      <div class="kpi"><span class="kpi__n" data-count="3">0</span><span class="kpi__l">Langues de travail</span></div>
-      <div class="kpi"><span class="kpi__n" data-count="2">0</span><span class="kpi__l">Pays</span></div>
-      <div class="kpi"><span class="kpi__n" data-count="5">0</span><span class="kpi__l">Structures traversées</span></div>
-    </div>
+
+  <div class="wrap dash" data-for="hum">
+    <h2 data-i18n="dash.hum.t">Le parcours en huit jalons</h2>
+    <ol class="jalons">
+      <li data-i18n="dash.j1">Licence, management bancaire</li>
+      <li data-i18n="dash.j2">Master, opérations financières</li>
+      <li data-i18n="dash.j3">Cabinet et banque</li>
+      <li data-i18n="dash.j4">Industrie</li>
+      <li data-i18n="dash.j5">Belgique</li>
+      <li data-i18n="dash.j6">EPHEC (en finalisation)</li>
+      <li data-i18n="dash.j7">Coordination de 2 entités</li>
+      <li data-i18n="dash.j8">Objectif ITAA</li>
+    </ol>
   </div>
 </header>
 
 <main class="wrap">
 
-  <!-- ===== PROFIL ===== -->
-  <section class="sec reveal" style="--o-cpt:1;--o-fin:1;--o-hum:1">
-    <div class="head"><h2 class="sk"><span>Profil</span></h2><i class="rule"></i></div>
-    <p class="lead" data-for="cpt">Comptable avec plus de huit ans d'expérience sur la comptabilité générale de plusieurs entités. Je couvre le cycle complet : écritures courantes, provisions, amortissements, opérations diverses, réconciliations et justification des comptes de bilan et de résultats. Je mène les clôtures mensuelles, trimestrielles et annuelles, je prépare les audits avec les réviseurs et je traite les déclarations TVA. Key User SAP FI, je documente les procédures et je fiabilise les imputations.</p>
-    <p class="lead" data-for="fin">Master en opérations financières, je produis le reporting et le contrôle de gestion de deux organisations. Je construis et suis les budgets, j'analyse les écarts entre réalisé, budget et trajectoire, et je restitue à la Direction et aux pouvoirs subsidiants. Mon travail consiste à transformer des données comptables et d'activité hétérogènes en indicateurs sur lesquels on peut décider. Excel avancé, comptabilité analytique et automatisation sont mes outils quotidiens.</p>
-    <p class="lead" data-for="hum">Un chiffre juste ne sert à rien si personne ne le comprend. Je passe autant de temps à expliquer un écart qu'à le calculer, et j'ai appris que la clarté vaut mieux que la démonstration. J'encadre quatre personnes, je travaille avec la Direction, les réviseurs et les bailleurs de fonds, et je tiens à ce que chacun sache pourquoi on fait les choses, pas seulement comment. Je suis d'un naturel calme, je préfère désamorcer que dramatiser, et une clôture bouclée se fête.</p>
+  <section class="reveal" id="angles-section">
+    <div class="head"><h2 class="sk"><span data-i18n="b.intro">Un parcours. Trois angles de lecture.</span></h2><i class="rule"></i><span class="eyebrow" data-i18n="b.sub">Choisissez ce que vous souhaitez approfondir.</span></div>
+    <p class="lead" data-i18n="b.frame">Trois facettes d'un même métier, pas trois profils différents.</p>
+    <div class="panels">
+      <button class="panel" type="button" data-set="cpt" aria-pressed="true"><b data-i18n="u.cpt.n">Comptabilité</b><small data-i18n="u.cpt.p">Je fiabilise et je sécurise.</small></button>
+      <button class="panel" type="button" data-set="fin" aria-pressed="false"><b data-i18n="u.fin.n">Finance</b><small data-i18n="u.fin.p">J'analyse et j'anticipe.</small></button>
+      <button class="panel" type="button" data-set="hum" aria-pressed="false"><b data-i18n="u.hum.n">Samir</b><small data-i18n="u.hum.p">J'explique, je coordonne et je progresse.</small></button>
+    </div>
   </section>
 
-  <!-- ===== PÉRIMÈTRE COMPTABLE — angle comptabilité ===== -->
-  <section class="sec reveal" data-for="cpt" style="--o-cpt:2">
-    <div class="head"><h2 class="sk"><span>Périmètre couvert</span></h2><i class="rule"></i><span class="eyebrow">Sept cycles</span></div>
+  <section class="reveal" data-for="cpt">
+    <div class="head"><h2 class="sk"><span data-i18n="u.cpt.p2">Je fiabilise et je sécurise</span></h2><i class="rule"></i><span class="eyebrow" data-i18n="cy.e">Sept cycles</span></div>
+    <p class="lead" data-i18n="u.cpt.txt">Comptable de terrain avec plus de huit ans d'expérience sur la comptabilité générale de plusieurs entités. Je tiens les écritures (provisions, amortissements, opérations diverses, régularisations), je réconcilie et je justifie les comptes de bilan et de résultats, et j'explique les écarts. Je mène les clôtures mensuelles et annuelles, je prépare les comptes annuels et les dossiers d'audit avec le réviseur, et je suis la TVA et les obligations fiscales. Référent des outils comptables sous Adfinity, formé SAP FI (orientation Key User), je documente les procédures et je fiabilise les imputations.</p>
     <div class="cycles">
-      <div class="cycle"><b>Achats et fournisseurs</b><p>Encodage, contrôle des imputations, cycle fournisseurs, échéanciers et préparation des paiements.</p></div>
-      <div class="cycle"><b>Ventes et clients</b><p>Suivi des créances, lettrage, rapprochement des comptes clients.</p></div>
-      <div class="cycle"><b>Immobilisations</b><p>Tableau des immobilisés, plans d'amortissement, écritures de dotation et de sortie.</p></div>
-      <div class="cycle"><b>Trésorerie</b><p>Suivi au jour le jour, rapprochements bancaires, paiements via Isabel, recettes et dépenses.</p></div>
-      <div class="cycle"><b>Fiscalité</b><p>Déclarations TVA, obligations périodiques, régularisations proactives et préparation des déclarations.</p></div>
-      <div class="cycle"><b>Clôture et comptes annuels</b><p>Provisions, opérations diverses, justification des comptes de bilan et de résultats, dossier pour le réviseur.</p></div>
-      <div class="cycle"><b>Analytique et subsides</b><p>Imputations par projet, justification des dépenses subsidiées, réponse aux audits des bailleurs.</p></div>
+      <div class="cycle"><b data-i18n="cy1.b">Achats et fournisseurs</b><p data-i18n="cy1.p">Encodage, contrôle des imputations, cycle fournisseurs, échéanciers et préparation des paiements.</p></div>
+      <div class="cycle"><b data-i18n="cy2.b">Ventes et clients</b><p data-i18n="cy2.p">Suivi des créances, lettrage, rapprochement des comptes clients.</p></div>
+      <div class="cycle"><b data-i18n="cy3.b">Immobilisations</b><p data-i18n="cy3.p">Tableau des immobilisés, plans d'amortissement, écritures de dotation et de sortie.</p></div>
+      <div class="cycle"><b data-i18n="cy4.b">Trésorerie</b><p data-i18n="cy4.p">Suivi au jour le jour, rapprochements bancaires, paiements via Isabel, recettes et dépenses.</p></div>
+      <div class="cycle"><b data-i18n="cy5.b">Fiscalité</b><p data-i18n="cy5.p">Déclarations TVA, obligations périodiques, régularisations proactives et préparation des déclarations.</p></div>
+      <div class="cycle"><b data-i18n="cy6.b">Clôture et comptes annuels</b><p data-i18n="cy6.p">Provisions, opérations diverses, justification des comptes, dossier pour le réviseur.</p></div>
+      <div class="cycle"><b data-i18n="cy7.b">Analytique et subsides</b><p data-i18n="cy7.p">Imputations par projet, justification des dépenses subsidiées, réponse aux audits des bailleurs.</p></div>
     </div>
+    <div class="cvbox" id="cv-cpt">
+      <a class="btn primary" download href="assets/cv/cv-general-ledger-accountant-fr.pdf"><span>Télécharger le CV recommandé : General Ledger Accountant</span></a>
+      <a class="btn" download href="assets/cv/cv-senior-accountant-fr.pdf"><span>Alternative : Senior Accountant</span></a>
+      <a class="btn" href="#tous-les-cv"><span>Voir les autres versions</span></a>
+    </div>
+    <p class="badge" data-i18n="lang.badge">Angle de candidature</p>
   </section>
 
-  <!-- ===== CHAÎNE DU REPORTING — angle finance ===== -->
-  <section class="sec reveal" data-for="fin" style="--o-fin:2">
-    <div class="head"><h2 class="sk"><span>De la donnée à la décision</span></h2><i class="rule"></i></div>
+  <section class="reveal" data-for="fin">
+    <div class="head"><h2 class="sk"><span data-i18n="ch.t">De la donnée à la décision</span></h2><i class="rule"></i></div>
+    <p class="lead" data-i18n="u.fin.txt">Formé à la finance (master en opérations financières et internationales), j'assure le reporting et le suivi budgétaire de deux entités : construction et suivi des budgets, analyse des écarts entre réalisé et prévision, tableaux de bord pour la Direction et les pouvoirs subsidiants. Je structure des données de sources hétérogènes pour en faire des indicateurs sur lesquels on peut décider. Excel avancé, comptabilité analytique et automatisation font partie de ma pratique quotidienne.</p>
     <div class="chain">
-      <div class="step"><span class="n">01</span><b>Sources</b><p>Comptabilité de deux entités, données d'activité, budgets et conventions de subsides.</p></div>
-      <div class="step"><span class="n">02</span><b>Structuration</b><p>Consolidation, contrôles de cohérence, imputations analytiques par projet.</p></div>
-      <div class="step"><span class="n">03</span><b>Analyse</b><p>Écarts réalisé, budget et trajectoire. Coûts et rentabilité par activité.</p></div>
-      <div class="step"><span class="n">04</span><b>Restitution</b><p>Tableaux de bord Excel, indicateurs financiers et opérationnels, reporting mensuel.</p></div>
-      <div class="step"><span class="n">05</span><b>Décision</b><p>Direction et pouvoirs subsidiants. Arbitrages budgétaires argumentés.</p></div>
+      <div class="step"><span class="n">01</span><b data-i18n="ch1.b">Sources</b><p data-i18n="ch1.p">Comptabilité de deux entités, données d'activité, budgets et conventions de subsides.</p></div>
+      <div class="step"><span class="n">02</span><b data-i18n="ch2.b">Structuration</b><p data-i18n="ch2.p">Rassemblement, contrôles de cohérence, imputations analytiques par projet.</p></div>
+      <div class="step"><span class="n">03</span><b data-i18n="ch3.b">Analyse</b><p data-i18n="ch3.p">Écarts réalisé, budget et trajectoire. Coûts et rentabilité par activité.</p></div>
+      <div class="step"><span class="n">04</span><b data-i18n="ch4.b">Restitution</b><p data-i18n="ch4.p">Tableaux de bord Excel, indicateurs financiers et opérationnels, reporting mensuel.</p></div>
+      <div class="step"><span class="n">05</span><b data-i18n="ch5.b">Décision</b><p data-i18n="ch5.p">Direction et pouvoirs subsidiants. Arbitrages budgétaires argumentés.</p></div>
     </div>
+    <div class="cvbox" id="cv-fin">
+      <a class="btn primary" download href="assets/cv/cv-financial-analyst-fr.pdf"><span>Télécharger le CV recommandé : Financial Analyst</span></a>
+      <a class="btn" download href="assets/cv/cv-controleur-de-gestion-fr.pdf"><span>Alternative : Contrôleur de gestion</span></a>
+      <a class="btn" href="#tous-les-cv"><span>Voir les autres versions</span></a>
+    </div>
+    <p class="badge" data-i18n="lang.badge">Angle de candidature</p>
   </section>
 
-  <!-- ===== MÉTHODE — angle savoir-être ===== -->
-  <section class="sec reveal" data-for="hum" style="--o-hum:2">
-    <div class="head"><h2 class="sk"><span>Comment je travaille</span></h2><i class="rule"></i></div>
+  <section class="reveal" data-for="hum">
+    <div class="head"><h2 class="sk"><span data-i18n="tr.t">Comment je travaille</span></h2><i class="rule"></i><span class="eyebrow" data-i18n="u.hum.sub">Ma manière de travailler</span></div>
+    <p class="lead" data-i18n="u.hum.txt">Un chiffre juste ne sert à rien si personne ne le comprend. Je passe autant de temps à expliquer un écart qu'à le calculer, et j'ai appris que la clarté vaut mieux que la démonstration. J'encadre et je coordonne une équipe de quatre collaborateurs sur deux entités, je travaille avec la Direction, le réviseur et les bailleurs de fonds, et je tiens à ce que chacun sache pourquoi on fait les choses, pas seulement comment.</p>
     <div class="traits">
-      <div class="trait"><b>Calme sous pression</b><p>Une clôture se joue sur quelques jours. Je préfère un rythme tenu et une équipe sereine à l'urgence permanente.</p></div>
-      <div class="trait"><b>Pédagogie</b><p>J'explique un écart, une imputation ou une procédure à quelqu'un qui n'est pas comptable, sans jargon et sans condescendance.</p></div>
-      <div class="trait"><b>Transmission</b><p>J'écris les procédures pour que le travail survive à mon absence. Un poste qui ne tient que sur une personne est un risque.</p></div>
-      <div class="trait"><b>Bonne humeur</b><p>Je rigole volontiers et je souris beaucoup. Ça n'enlève rien à la rigueur, ça rend juste les journées plus courtes.</p></div>
+      <div class="trait"><b data-i18n="tr1.b">Calme sous pression</b><p data-i18n="tr1.p">Une clôture se joue sur quelques jours. Je préfère un rythme tenu et une équipe sereine à l'urgence permanente.</p></div>
+      <div class="trait"><b data-i18n="tr2.b">Pédagogie</b><p data-i18n="tr2.p">J'explique un écart, une imputation ou une procédure à quelqu'un qui n'est pas comptable, sans jargon et sans condescendance.</p></div>
+      <div class="trait"><b data-i18n="tr3.b">Transmission</b><p data-i18n="tr3.p">J'écris les procédures pour que le travail survive à mon absence. Un poste qui ne tient que sur une personne est un risque.</p></div>
+      <div class="trait"><b data-i18n="tr4.b">Bonne humeur</b><p data-i18n="tr4.p">Je rigole volontiers et je souris beaucoup. Ça n'enlève rien à la rigueur, ça rend juste les journées plus courtes.</p></div>
     </div>
-    <div class="asks">
-      <p class="eyebrow" style="margin-bottom:.6rem">Ce qu'on vient me demander</p>
-      <ul>
-        <li data-for="hum">Expliquer un écart budgétaire à quelqu'un qui n'a jamais ouvert un bilan.</li>
-        <li data-for="hum">Débloquer un dossier de subvention avant l'échéance.</li>
-        <li data-for="hum">Écrire une procédure pour qu'elle tienne sans moi.</li>
-        <li data-for="hum">Garder le cap quand la clôture déraille.</li>
-      </ul>
+    <p class="eyebrow" style="margin:1.4rem 0 .6rem" data-i18n="insp.t">Ce qui m'inspire</p>
+    <ul class="likes">
+      <li data-i18n="insp1">Le café : l'accueil, la précision et la constance, au même niveau chaque jour.</li>
+      <li data-i18n="insp2">Les jeux vidéo et les mangas : le goût des systèmes bien construits et de la narration. Persona 5 a inspiré l'identité visuelle de ce site.</li>
+      <li data-i18n="insp3">Le sport : progresser par répétition, sans brûler les étapes.</li>
+      <li data-i18n="insp4">Les outils : comprendre comment une chose fonctionne pour la faire fonctionner mieux.</li>
+    </ul>
+    <div class="cvbox">
+      <a class="btn primary" href="#parcours-section"><span data-i18n="cv.parcours">Découvrir mon parcours</span></a>
+      <a class="btn" href="#tous-les-cv"><span data-i18n="cv.cibles">Voir mes CV ciblés</span></a>
     </div>
   </section>
 
-  <!-- ===== ÉTUDES DE CAS — angles pro ===== -->
-  <section class="sec reveal" data-for="cpt fin" style="--o-cpt:3;--o-fin:3">
-    <div class="head"><h2 class="sk"><span>Études de cas</span></h2><i class="rule"></i><span class="eyebrow">Contexte · problème · action · résultat</span></div>
+  <section class="reveal" id="etudes" data-for="cpt fin">
+    <div class="head"><h2 class="sk"><span data-i18n="c.t">Ce que mon CV ne montre pas</span></h2><i class="rule"></i></div>
+    <p class="lead" data-i18n="c.intro">Mon CV présente mes responsabilités. Ce portfolio montre comment je travaille, comment je résous les problèmes et quels résultats j'obtiens.</p>
 
     <article class="case" data-for="cpt fin">
-      <h3>Reporting de trésorerie automatisé <span class="res">60 min → 2 min</span></h3>
+      <h3><span data-i18n="cs1.t">Automatisation du reporting de trésorerie</span></h3>
       <div class="case__grid">
-        <div class="case__cell"><b>Contexte</b><p>Suivi de trésorerie de deux entités, produit sous Excel à intervalle régulier.</p></div>
-        <div class="case__cell"><b>Problème</b><p>Une heure de manipulations à chaque mise à jour : extractions, copier-coller, remise en forme. Une erreur possible à chaque étape manuelle.</p></div>
-        <div class="case__cell"><b>Ce que j'ai fait</b><p>Reconstruction du fichier : import structuré des données, zones de calcul séparées, contrôles de cohérence intégrés, mise en forme automatique.</p></div>
-        <div class="case__cell"><b>Résultat</b><p>2 minutes par mise à jour, suivi plus fréquent, fiabilité en hausse. Le temps gagné part dans l'analyse, pas dans la production.</p></div>
-      </div>
-      <div class="ba">
-        <div class="ba__col"><h4>Avant · 60 min</h4><ul><li>Extraction manuelle des données</li><li>Copier-coller entre onglets</li><li>Remise en forme à la main</li><li>Vérification ligne à ligne</li></ul></div>
-        <span class="ba__arrow" aria-hidden="true">→</span>
-        <div class="ba__col b"><h4>Après · 2 min</h4><ul><li>Import structuré</li><li>Actualisation des tableaux</li><li>Contrôles de cohérence automatiques</li></ul></div>
+        <div class="case__cell"><b data-i18n="lbl.ctx">Contexte</b><p data-i18n="cs1.ctx">Suivi de trésorerie de deux entités sous Excel, mis à jour régulièrement pour la coordination et la Direction.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.pb">Problème</b><p data-i18n="cs1.pb">La production reposait sur une chaîne de manipulations manuelles : extractions, copier-coller entre onglets, remise en forme, vérification ligne à ligne. Chaque étape manuelle était une occasion d'erreur, et le temps de production limitait la fréquence du suivi.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.ana">Analyse</b><p data-i18n="cs1.ana">Le fichier mélangeait trois couches : données brutes, calculs et présentation. Tant qu'elles restaient imbriquées, chaque mise à jour obligeait à tout refaire.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.act">Action</b><p data-i18n="cs1.act">Reconstruction du fichier en couches séparées : import structuré des données, zone de calcul isolée, contrôles de cohérence intégrés, mise en forme automatique en sortie.</p></div>
+        <div class="case__cell c-res"><b data-i18n="lbl.res">Résultat</b><p data-i18n="cs1.res">Automatisation quasi complète de la production ; le temps bascule de la fabrication du fichier vers l'analyse des soldes.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.comp">Compétences démontrées</b><p data-i18n="cs1.comp">Excel avancé, structuration de données, contrôle interne, automatisation, trésorerie.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.learn">Ce que j'en ai appris</b><p data-i18n="cs1.learn">Une automatisation ne vaut que si les contrôles sont dedans. Gagner du temps sans fiabiliser ne fait que déplacer le problème.</p></div>
       </div>
     </article>
 
     <article class="case" data-for="cpt">
-      <h3>Cycle de clôture réorganisé <span class="res">−10 % de durée</span></h3>
+      <h3><span data-i18n="cs2.t">Réorganisation du cycle de clôture</span></h3>
       <div class="case__grid">
-        <div class="case__cell"><b>Contexte</b><p>Clôtures mensuelles sur deux entités, avec des échéances de reporting serrées.</p></div>
-        <div class="case__cell"><b>Problème</b><p>Des écarts détectés tard dans le cycle obligeaient à rejouer des contrôles déjà passés.</p></div>
-        <div class="case__cell"><b>Ce que j'ai fait</b><p>Réordonnancement des contrôles et des réconciliations : les vérifications bloquantes en tête, boucle de correction resserrée.</p></div>
-        <div class="case__cell"><b>Résultat</b><p>Cycle raccourci de 10 %, moins de retours en arrière. Le processus complet est modélisé en <a href="parcours.html">BPMN</a>.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.ctx">Contexte</b><p data-i18n="cs2.ctx">Clôtures mensuelles de deux entités, avec des échéances de reporting rapprochées.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.pb">Problème</b><p data-i18n="cs2.pb">Des écarts détectés tard obligeaient à rejouer des contrôles déjà passés ; la fin de cycle absorbait les retards du début.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.ana">Analyse</b><p data-i18n="cs2.ana">L'ordre des contrôles ne suivait pas leur pouvoir bloquant : certaines vérifications tardives conditionnaient en réalité des étapes déjà franchies.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.act">Action</b><p data-i18n="cs2.act">Réordonnancement des contrôles et des réconciliations, vérifications bloquantes placées en tête de cycle, boucle de correction resserrée. Le processus est modélisé en BPMN sur la page Processus.</p></div>
+        <div class="case__cell c-res"><b data-i18n="lbl.res">Résultat</b><p data-i18n="cs2.res">Cycle de clôture raccourci et moins de retours en arrière.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.comp">Compétences démontrées</b><p data-i18n="cs2.comp">Clôtures, réconciliations, organisation de processus, modélisation BPMN.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.learn">Ce que j'en ai appris</b><p data-i18n="cs2.learn">En clôture, l'ordre des contrôles compte autant que les contrôles eux-mêmes.</p></div>
       </div>
     </article>
 
     <article class="case" data-for="cpt">
-      <h3>TVA régularisée avant contrôle <span class="res">0 redressement</span></h3>
+      <h3><span data-i18n="cs3.t">Détection et régularisation d'anomalies TVA</span></h3>
       <div class="case__grid">
-        <div class="case__cell"><b>Contexte</b><p>Déclarations TVA périodiques sur les entités gérées.</p></div>
-        <div class="case__cell"><b>Problème</b><p>Des anomalies repérées lors de contrôles internes de cohérence.</p></div>
-        <div class="case__cell"><b>Ce que j'ai fait</b><p>Régularisation spontanée avant toute intervention externe, puis mise en place de vérifications récurrentes.</p></div>
-        <div class="case__cell"><b>Résultat</b><p>Aucun redressement fiscal. Corriger soi-même coûte toujours moins cher qu'être corrigé.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.ctx">Contexte</b><p data-i18n="cs3.ctx">Déclarations TVA périodiques et obligations fiscales des entités gérées.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.pb">Problème</b><p data-i18n="cs3.pb">Des incohérences potentielles entre la comptabilité et les bases déclarées.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.ana">Analyse</b><p data-i18n="cs3.ana">Croisement systématique des bases déclarées avec les comptes, identification de l'origine des écarts.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.act">Action</b><p data-i18n="cs3.act">Régularisation proactive avant tout contrôle externe, puis mise en place de vérifications récurrentes en amont de chaque déclaration.</p></div>
+        <div class="case__cell c-res"><b data-i18n="lbl.res">Résultat</b><p data-i18n="cs3.res">Détection et régularisation proactive d'anomalies TVA avant contrôle, afin de sécuriser la conformité des déclarations.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.comp">Compétences démontrées</b><p data-i18n="cs3.comp">TVA, conformité fiscale, contrôle interne, rigueur documentaire.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.learn">Ce que j'en ai appris</b><p data-i18n="cs3.learn">Corriger soi-même coûte toujours moins cher qu'être corrigé.</p></div>
       </div>
     </article>
 
     <article class="case" data-for="fin">
-      <h3>Reporting standardisé <span class="res">−30 % de traitement</span></h3>
+      <h3><span data-i18n="cs4.t">Standardisation du reporting multi-entités</span></h3>
       <div class="case__grid">
-        <div class="case__cell"><b>Contexte</b><p>Reportings produits pour la Direction et les pouvoirs subsidiants, à partir de sources hétérogènes.</p></div>
-        <div class="case__cell"><b>Problème</b><p>Des trames différentes selon les destinataires, un temps de traitement élevé et des risques d'incohérence.</p></div>
-        <div class="case__cell"><b>Ce que j'ai fait</b><p>Standardisation des trames et des sources, imputations analytiques par projet, contrôles de cohérence systématiques.</p></div>
-        <div class="case__cell"><b>Résultat</b><p>Temps de traitement réduit de 30 %, un seul socle de données pour tous les destinataires.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.ctx">Contexte</b><p data-i18n="cs4.ctx">Reportings destinés à la Direction et aux pouvoirs subsidiants, produits pour deux entités à partir de sources hétérogènes.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.pb">Problème</b><p data-i18n="cs4.pb">Des trames différentes selon les destinataires, un temps de traitement élevé, des risques d'incohérence entre versions.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.ana">Analyse</b><p data-i18n="cs4.ana">La multiplication des formats venait de l'absence d'un socle de données commun ; chaque reporting repartait de zéro.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.act">Action</b><p data-i18n="cs4.act">Standardisation des trames et des sources, imputations analytiques par projet, contrôles de cohérence systématiques avant diffusion.</p></div>
+        <div class="case__cell c-res"><b data-i18n="lbl.res">Résultat</b><p data-i18n="cs4.res">Réduction significative du temps de traitement et un socle unique pour tous les destinataires.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.comp">Compétences démontrées</b><p data-i18n="cs4.comp">Reporting multi-entités, comptabilité analytique, fiabilisation des données, communication financière.</p></div>
+        <div class="case__cell"><b data-i18n="lbl.learn">Ce que j'en ai appris</b><p data-i18n="cs4.learn">Un bon reporting se standardise à la source, pas à la mise en forme.</p></div>
       </div>
     </article>
   </section>
 
-  <!-- ===== GRAPHIQUE — angle comptabilité ===== -->
-  <section class="sec charts no-print reveal" data-for="cpt" style="--o-cpt:4">
-    <div class="card">
-      <h3>Maîtrise par cycle</h3>
-      <p class="hint">Niveau déclaré : 1 notions, 2 opérationnel, 3 autonome, 4 référent.</p>
-      <div class="chart-box"><canvas id="radar"></canvas></div>
-    </div>
-    <div class="card">
-      <h3>Cycle de clôture</h3>
-      <p class="hint">Le processus complet, du cut-off au reporting, est modélisé en BPMN.</p>
-      <p style="font-size:.93rem;margin:.2rem 0 .9rem;color:var(--encre-doux)">Sept étapes, une boucle de correction sur les écarts non justifiés. C'est la réorganisation de cette boucle qui a raccourci la clôture de 10 %.</p>
-      <p><a class="btn" href="parcours.html" style="border-color:var(--encre);color:var(--encre)"><span>Voir le diagramme</span></a></p>
-    </div>
-  </section>
-
-  <!-- ===== GRAPHIQUES — angle finance ===== -->
-  <section class="sec charts no-print reveal" data-for="fin" style="--o-fin:4">
-    <div class="card">
-      <h3>Gains de temps obtenus</h3>
-      <p class="hint">Réduction mesurée sur des processus que j'ai réorganisés.</p>
-      <div class="chart-box"><canvas id="bars"></canvas></div>
-    </div>
-    <div class="card">
-      <h3>Répartition de la charge</h3>
-      <p class="hint">Poste actuel, en part de temps sur l'année.</p>
-      <div class="chart-box"><canvas id="donut"></canvas></div>
+  <section class="reveal" id="essentiel">
+    <div class="head"><h2 class="sk"><span data-i18n="d.t">L'essentiel en 60 secondes</span></h2><i class="rule"></i></div>
+    <div class="ess">
+      <div><b data-i18n="d.pos.l">Positionnement</b><p data-i18n="d.pos.v">De la comptabilité à la décision.</p></div>
+      <div><b data-i18n="d.job.l">Poste actuel</b><p data-i18n="d.job.v">Coordinateur financier et administratif, Mission Locale de Molenbeek et Molenbeek Formation (ASBL, Bruxelles), depuis 2024.</p></div>
+      <div><b data-i18n="d.exp.l">Expérience</b><p data-i18n="d.exp.v">Plus de huit ans en comptabilité et finance, au Maroc puis en Belgique.</p></div>
+      <div><b data-i18n="d.res.l">Quatre résultats</b><p data-i18n="d.res.v">Automatisation quasi complète du reporting de trésorerie · réduction significative du temps de traitement des reportings · cycle de clôture raccourci par la réorganisation des contrôles · détection et régularisation proactive d'anomalies TVA avant contrôle.</p></div>
+      <div><b data-i18n="d.comp.l">Compétences</b><p data-i18n="d.comp.v">Comptabilité générale, clôtures mensuelles et annuelles, comptes annuels, TVA et obligations fiscales, trésorerie et paiements, reporting et budgets, comptabilité analytique, procédures et contrôle interne.</p></div>
+      <div><b data-i18n="d.tools.l">Outils</b><p data-i18n="d.tools.v">Adfinity, Isabel, Excel avancé, Winbooks, Popsy, SAP FI (formation Key User).</p></div>
+      <div><b data-i18n="d.form.l">Formation</b><p data-i18n="d.form.v">Master en opérations financières et internationales (2015) · Bachelier en comptabilité, orientation fiscalité, EPHEC, en cours de finalisation.</p></div>
+      <div><b data-i18n="d.lang.l">Langues</b><p data-i18n="d.lang.v">Français courant (langue de travail) · arabe (langue maternelle) · anglais intermédiaire professionnel : bonne compréhension écrite, communication écrite opérationnelle, expression orale en progression.</p></div>
+      <div><b data-i18n="d.contact.l">Coordonnées</b><p><a href="mailto:eltaibesamir@gmail.com">eltaibesamir@gmail.com</a> · <a href="https://www.linkedin.com/in/samir-eltaibe" rel="noopener">LinkedIn</a> · Bruxelles</p></div>
+      <div><b>CV</b><p><a id="contact-cv" class="print-url" download href="assets/cv/cv-general-ledger-accountant-fr.pdf">Télécharger le CV recommandé : General Ledger Accountant</a></p></div>
     </div>
   </section>
 
-  <!-- ===== RÉALISATIONS ===== -->
-  <section class="sec reveal" data-for="cpt fin" style="--o-cpt:5;--o-fin:5">
-    <div class="head"><h2 class="sk"><span>Réalisations</span></h2><i class="rule"></i></div>
-    <ul>
-      <li class="ach" data-for="cpt"><span class="ach__txt">Cycle de clôture raccourci en réorganisant les contrôles et les réconciliations</span><span class="ach__val">−10 %</span></li>
-      <li class="ach" data-for="cpt"><span class="ach__txt">Déclarations TVA régularisées de manière proactive, aucun redressement fiscal</span><span class="ach__val">0 €</span></li>
-      <li class="ach" data-for="cpt"><span class="ach__txt">Comptes de bilan justifiés et audits préparés avec le réviseur sur deux entités</span><span class="ach__val">2 entités</span></li>
-      <li class="ach" data-for="fin"><span class="ach__txt">Reporting de trésorerie automatisé sous Excel, production ramenée de 60 à 2 minutes</span><span class="ach__val">−97 %</span></li>
-      <li class="ach" data-for="fin"><span class="ach__txt">Procédures de reporting standardisées, temps de traitement réduit</span><span class="ach__val">−30 %</span></li>
-      <li class="ach" data-for="fin"><span class="ach__txt">Données de reporting fiabilisées par des contrôles de cohérence et des imputations analytiques</span><span class="ach__val">2 entités</span></li>
-    </ul>
+  <section class="reveal" id="parcours-section">
+    <div class="head"><h2 class="sk"><span data-i18n="e.t">Parcours</span></h2><i class="rule"></i><span class="eyebrow">2010 → 2026</span></div>
+    <p class="lead" data-i18n="e.msg">Une formation initiale en finance, une expérience opérationnelle, puis une spécialisation volontaire en comptabilité belge.</p>
+    <ol class="tl">
+      <li><span class="p">2010-2013</span><span class="j" data-i18n="tl1">Licence en management bancaire, HBF, Oujda</span></li>
+      <li><span class="p">2013-2015</span><span class="j" data-i18n="tl2">Master en opérations financières et internationales, HBF, Oujda</span></li>
+      <li><span class="p">2015-2017</span><span class="j" data-i18n="tl3">Comptable junior et missions fiscales en cabinet : Somnium, Cabinet Aderghal, BMCI</span></li>
+      <li><span class="p">2017-2018</span><span class="j" data-i18n="tl4">Assistant financier, Casamarmol et Granit, Casablanca</span></li>
+      <li><span class="p">2018-2022</span><span class="j" data-i18n="tl5">Gestionnaire financier et administratif, Marbre El Yamani, Nador : coordination des travaux comptables et administratifs</span></li>
+      <li><span class="p">2022-2023</span><span class="j" data-i18n="tl6">Installation en Belgique : adaptation au référentiel comptable belge, équivalences, préparation de la reprise d'études</span></li>
+      <li><span class="p">2023</span><span class="j" data-i18n="tl7">Reprise d'études à l'EPHEC : bachelier en comptabilité, orientation fiscalité</span></li>
+      <li><span class="p">06-07/2024</span><span class="j" data-i18n="tl8">Mission comptable, We-Care ASBL, Bruxelles</span></li>
+      <li><span class="p">2024 →</span><span class="j" data-i18n="tl9">Coordinateur financier et administratif, Mission Locale de Molenbeek et Molenbeek Formation</span></li>
+      <li class="h"><span class="p" data-i18n="tl.h">Horizon</span><span class="j" data-i18n="tl10">Poursuivre mon parcours vers la certification ITAA</span></li>
+    </ol>
   </section>
 
-  <!-- ===== PARCOURS ===== -->
-  <section class="sec reveal" style="--o-cpt:6;--o-fin:6;--o-hum:3">
-    <div class="head"><h2 class="sk"><span>Parcours</span></h2><i class="rule"></i></div>
-
-    <article class="entry">
-      <div class="entry__period"><b>2024</b>présent<br>Bruxelles</div>
-      <div>
-        <h3>Coordinateur financier et administratif</h3>
-        <p class="entry__org">Mission Locale de Molenbeek et Molenbeek Formation, ASBL</p>
-        <ul>
-          <li data-for="cpt">Comptabilité générale de deux entités, de l'écriture quotidienne aux comptes annuels.</li>
-          <li data-for="cpt">Clôtures et écritures de régularisation, justification des comptes de bilan, contrôle des imputations.</li>
-          <li data-for="cpt">Trésorerie au jour le jour : paiements, rapprochements bancaires, recettes et dépenses.</li>
-          <li data-for="cpt">Déclarations TVA et préparation des audits avec les réviseurs.</li>
-          <li data-for="fin">Construction et suivi des budgets, analyse des écarts entre réalisé, budget et trajectoire.</li>
-          <li data-for="fin">Reporting financier et budgétaire pour la Direction et les pouvoirs subsidiants, sur base analytique par projet.</li>
-          <li data-for="fin">Structuration des données de deux entités pour alimenter les tableaux de bord.</li>
-          <li data-for="hum">Encadrement d'une équipe de 4 personnes sur deux structures.</li>
-          <li data-for="hum">Interlocuteur de la Direction, des réviseurs et des bailleurs de fonds sur l'ensemble des dossiers financiers.</li>
-          <li data-for="cpt fin hum">Documentation et évolution des procédures comptables et des outils de suivi.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="entry" data-for="cpt fin">
-      <div class="entry__period"><b>06/2024</b>07/2024<br>Bruxelles</div>
-      <div>
-        <h3>Comptable, mission ponctuelle</h3>
-        <p class="entry__org">We-Care ASBL</p>
-        <ul><li data-for="cpt fin">Appui à la tenue comptable et aux tâches administratives.</li></ul>
-      </div>
-    </article>
-
-    <article class="entry">
-      <div class="entry__period"><b>09/2018</b>08/2022<br>Nador, Maroc</div>
-      <div>
-        <h3>Gestionnaire financier et administratif</h3>
-        <p class="entry__org">Marbre El Yamani Groupe</p>
-        <ul>
-          <li data-for="cpt">General Ledger : provisions, amortissements, opérations diverses et régularisations.</li>
-          <li data-for="cpt">Réconciliation et justification des comptes de bilan et de résultats, explication des écarts.</li>
-          <li data-for="cpt">Clôtures mensuelles, trimestrielles et annuelles, préparation des audits avec le réviseur.</li>
-          <li data-for="fin">Comptabilité analytique pour le suivi des coûts et de la rentabilité par activité.</li>
-          <li data-for="fin">Élaboration et suivi des budgets, analyses chiffrées à l'appui des décisions.</li>
-          <li data-for="fin">Automatisation des reportings sous Excel.</li>
-          <li data-for="hum">Encadrement de 4 personnes et refonte des procédures internes.</li>
-          <li data-for="hum">Quatre années dans un groupe industriel, en lien avec la production et la direction.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="entry">
-      <div class="entry__period"><b>09/2017</b>06/2018<br>Casablanca</div>
-      <div>
-        <h3>Assistant financier, comptabilité et fiscalité</h3>
-        <p class="entry__org">Casamarmol et Granit</p>
-        <ul>
-          <li data-for="cpt">Comptabilité générale, clôtures et cycle fournisseurs, préparation des déclarations fiscales.</li>
-          <li data-for="fin">Participation au déploiement de nouvelles fonctionnalités ERP.</li>
-          <li data-for="hum">Travail en binôme avec les équipes opérationnelles lors du déploiement ERP.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="entry">
-      <div class="entry__period"><b>06/2015</b>07/2017<br>Maroc</div>
-      <div>
-        <h3>Comptable junior et conseiller fiscal</h3>
-        <p class="entry__org">Somnium · Cabinet Aderghal · BMCI</p>
-        <ul>
-          <li data-for="cpt">Missions de comptabilité, de conseil fiscal et d'audit en cabinet.</li>
-          <li data-for="fin">Reportings mensuels et trimestriels, préparation budgétaire, suivi clients et fournisseurs.</li>
-          <li data-for="hum">Trois structures en deux ans : cabinet, conseil et banque. Apprentissage de l'adaptation rapide.</li>
-        </ul>
-      </div>
-    </article>
-  </section>
-
-  <!-- ===== CHRONOLOGIE ===== -->
-  <section class="sec reveal" data-for="fin hum" style="--o-fin:7;--o-hum:4">
-    <div class="head"><h2 class="sk"><span>Chronologie</span></h2><i class="rule"></i><span class="eyebrow">2010 → 2026</span></div>
-    <div class="tl">
-      <div class="tl__scale">
-        <span class="tl__year" style="left:0%">2010</span>
-        <span class="tl__year" style="left:24.1%">2014</span>
-        <span class="tl__year" style="left:48.2%">2018</span>
-        <span class="tl__year" style="left:72.3%">2022</span>
-        <span class="tl__year" style="left:96.4%">2026</span>
-      </div>
-      <div class="tl__row"><div class="tl__bar form" style="left:4.5%;width:17.2%"><span>Licence management bancaire</span></div></div>
-      <div class="tl__row"><div class="tl__bar form" style="left:22.6%;width:10.5%"><span>Master opé. financières</span></div></div>
-      <div class="tl__row"><div class="tl__bar exp" style="left:32.7%;width:13.0%"><span>Comptable junior et conseiller fiscal</span></div></div>
-      <div class="tl__row"><div class="tl__bar exp" style="left:46.2%;width:5.0%"><span>Assistant fin.</span></div></div>
-      <div class="tl__row"><div class="tl__bar exp" style="left:52.2%;width:24.1%"><span>Gestionnaire financier et administratif</span></div></div>
-      <div class="tl__row"><div class="tl__bar tr" style="left:76.3%;width:6.5%"><span>Installation en Belgique</span></div></div>
-      <div class="tl__row"><div class="tl__bar form" style="left:82.8%;width:16.6%"><span>Bachelier EPHEC</span></div></div>
-      <div class="tl__row"><div class="tl__bar exp" style="left:88.9%;width:11.1%"><span>Coordinateur financier</span></div></div>
-      <div class="tl__legend">
-        <span><i class="dot exp"></i> Expérience</span>
-        <span><i class="dot form"></i> Formation</span>
-        <span><i class="dot tr"></i> Transition</span>
-      </div>
+  <section class="reveal">
+    <div class="band">
+      <p data-i18n="f.txt">Cette modélisation montre comment je structure et contrôle une clôture mensuelle sur deux entités.</p>
+      <a class="btn" href="parcours.html"><span data-i18n="f.link">Voir la page Processus (BPMN)</span></a>
     </div>
   </section>
 
-  <!-- ===== EN DEHORS DU BUREAU — angle savoir-être ===== -->
-  <section class="sec reveal" data-for="hum" style="--o-hum:5">
-    <div class="head"><h2 class="sk"><span>En dehors du bureau</span></h2><i class="rule"></i></div>
-    <div class="likes">
-      <span class="like"><span>Jeux vidéo</span></span>
-      <span class="like"><span>Manga</span></span>
-      <span class="like"><span>Persona 5</span></span>
-    </div>
+  <section class="reveal" id="progression">
+    <div class="head"><h2 class="sk"><span data-i18n="g.t">Comment je progresse</span></h2><i class="rule"></i></div>
+    <p class="lead" data-i18n="g.txt">Je considère l'expertise comme un parcours continu. Après une formation initiale en finance, j'ai repris des études en comptabilité en Belgique afin de consolider ma pratique et de poursuivre progressivement mon objectif de certification ITAA.</p>
   </section>
 
-  <!-- ===== ANNEXES ===== -->
-  <section class="sec reveal" style="--o-cpt:7;--o-fin:8;--o-hum:6">
-    <div class="head"><h2 class="sk"><span>Compétences et formation</span></h2><i class="rule"></i></div>
-    <div class="annex">
-      <div>
-        <h3>Compétences</h3>
-        <div class="chips">
-          <span class="chip key" data-for="cpt">Comptabilité générale</span>
-          <span class="chip key" data-for="cpt">Clôtures et comptes annuels</span>
-          <span class="chip" data-for="cpt">Provisions, amortissements, OD</span>
-          <span class="chip" data-for="cpt">Réconciliations et justification</span>
-          <span class="chip" data-for="cpt">GL et sous-ledgers (AP, AR, Assets)</span>
-          <span class="chip" data-for="cpt">Trésorerie et rapprochements</span>
-          <span class="chip" data-for="cpt">TVA et obligations fiscales</span>
-          <span class="chip" data-for="cpt">Audits et réviseurs</span>
-          <span class="chip" data-for="cpt">Contrôle interne</span>
-          <span class="chip key" data-for="fin">Reporting financier</span>
-          <span class="chip key" data-for="fin">Analyses budgétaires et écarts</span>
-          <span class="chip" data-for="fin">KPI financiers et opérationnels</span>
-          <span class="chip" data-for="fin">Projections financières</span>
-          <span class="chip" data-for="fin">Tableaux de bord</span>
-          <span class="chip" data-for="fin">Comptabilité analytique</span>
-          <span class="chip" data-for="fin">Fiabilité et structuration des données</span>
-          <span class="chip key" data-for="hum">Encadrement d'équipe</span>
-          <span class="chip key" data-for="hum">Pédagogie et vulgarisation</span>
-          <span class="chip" data-for="hum">Rédaction de procédures</span>
-          <span class="chip" data-for="hum">Relation Direction et bailleurs</span>
-          <span class="chip" data-for="hum">Travail pluridisciplinaire</span>
-          <span class="chip" data-for="cpt fin hum">Amélioration continue</span>
+  <section class="reveal" id="contact">
+    <div class="head"><h2 class="sk"><span data-i18n="h.t">Échangeons</span></h2><i class="rule"></i></div>
+    <p class="lead" data-i18n="h.lead">Vous avez découvert mon parcours. Échangeons maintenant sur vos besoins.</p>
+    <p class="actions">
+      <a class="btn primary" id="contact-cv-2" download href="assets/cv/cv-general-ledger-accountant-fr.pdf"><span>Télécharger le CV recommandé : General Ledger Accountant</span></a>
+      <a class="btn" href="#tous-les-cv"><span data-i18n="cv.autres">Voir les autres versions</span></a>
+      <a class="btn" href="https://www.linkedin.com/in/samir-eltaibe" rel="noopener"><span data-i18n="h.li">Ouvrir LinkedIn</span></a>
+      <a class="btn" href="mailto:eltaibesamir@gmail.com"><span data-i18n="h.mail">Envoyer un e-mail</span></a>
+    </p>
+    <details id="tous-les-cv">
+      <summary data-i18n="h.all">Tous les CV ciblés, par famille</summary>
+      <div id="cv-familles">
+        <div class="fam"><b data-i18n="fam.accounting">Comptabilité</b>
+          <a class="print-url" download href="assets/cv/cv-general-ledger-accountant-fr.pdf">General Ledger Accountant</a>
+          <a class="print-url" download href="assets/cv/cv-senior-accountant-fr.pdf">Senior Accountant</a>
+          <a class="print-url" download href="assets/cv/cv-chef-comptable-fr.pdf">Chef comptable</a>
+          <a class="print-url" download href="assets/cv/cv-comptable-confirme-fr.pdf">Comptable confirmé</a>
+          <a class="print-url" download href="assets/cv/cv-comptabilite-generale-publique-fr.pdf">Comptabilité générale et publique</a>
+        </div>
+        <div class="fam"><b data-i18n="fam.finance">Finance</b>
+          <a class="print-url" download href="assets/cv/cv-financial-analyst-fr.pdf">Financial Analyst</a>
+          <a class="print-url" download href="assets/cv/cv-controleur-de-gestion-fr.pdf">Contrôleur de gestion</a>
+        </div>
+        <div class="fam"><b data-i18n="fam.process">Processus et ERP</b>
+          <a class="print-url" download href="assets/cv/cv-referent-erp-processus-fr.pdf">Comptable, référent ERP et processus</a>
+        </div>
+        <div class="fam"><b data-i18n="fam.english">Anglais</b>
+          <a class="print-url" download href="assets/cv/cv-experienced-accountant-en.pdf">Experienced Accountant (EN)</a>
         </div>
       </div>
-      <div>
-        <h3>Outils</h3>
-        <div class="chips">
-          <span class="chip" data-for="cpt fin hum">SAP FI (Key User)</span>
-          <span class="chip" data-for="cpt fin hum">Adfinity (Easi)</span>
-          <span class="chip" data-for="cpt fin hum">Winbooks</span>
-          <span class="chip" data-for="cpt fin hum">Popsy</span>
-          <span class="chip" data-for="cpt fin hum">Isabel</span>
-          <span class="chip" data-for="cpt hum">Excel avancé</span>
-          <span class="chip" data-for="fin">Excel : TCD, Power Query, modélisation</span>
-          <span class="chip" data-for="cpt fin hum">MS Office</span>
-        </div>
-        <h3 style="margin-top:1.3rem">Langues</h3>
-        <div class="lang"><span>Français</span><span>Courant · travail</span></div>
-        <div class="lang"><span>Arabe</span><span>Langue maternelle</span></div>
-        <div class="lang"><span>Anglais</span><span>B2 · professionnel</span></div>
-      </div>
-      <div>
-        <h3>Formation</h3>
-        <div class="edu"><b>Bachelier comptabilité et finance stratégique</b><span>EPHEC, Bruxelles · 2023–2026 (en cours)</span></div>
-        <div class="edu"><b>Master opérations financières et internationales</b><span>HBF, Oujda, Maroc · 2013–2015</span></div>
-        <div class="edu"><b>Licence management bancaire</b><span>HBF, Oujda, Maroc · 2010–2013</span></div>
-      </div>
-    </div>
+    </details>
   </section>
 </main>
 
 <footer>
   <div class="wrap footer__in">
-    <span>Samir El Taibe · Bruxelles · 2026</span>
-    <span><a href="parcours.html">Parcours BPMN</a> · <a href="mailto:eltaibesamir@gmail.com">eltaibesamir@gmail.com</a></span>
+    <span>Samir El Taibe · Bruxelles · 2026 · <span data-i18n="foot.made">Fait main en HTML, CSS et JavaScript natifs, sans framework.</span></span>
+    <span data-i18n="foot.colophon">Le grec ouvre le site comme une métaphore de la traduction : du langage du chiffre vers celui de la décision.</span>
   </div>
 </footer>
 
-<script>
-(function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var body = document.body, tabs = document.querySelectorAll('.angle'), wipe = document.getElementById('wipe');
-
-  /* les initiales disparaissent dès qu'une photo est disponible */
-  window.__pOK = function(){ var fb = document.getElementById('fb'); if (fb) fb.style.display = 'none'; };
-
-  /* parallaxe discrète du portrait */
-  var portrait = document.getElementById('portrait');
-  if (portrait && !reduce && window.matchMedia('(pointer:fine)').matches){
-    var raf = null, tx = 0, ty = 0;
-    window.addEventListener('mousemove', function(e){
-      tx = (e.clientX / window.innerWidth - .5) * 10;
-      ty = (e.clientY / window.innerHeight - .5) * 8;
-      if (!raf) raf = requestAnimationFrame(function(){
-        raf = null;
-        portrait.style.setProperty('--px', tx.toFixed(2) + 'px');
-        portrait.style.setProperty('--py', ty.toFixed(2) + 'px');
-      });
-    }, { passive:true });
-  }
-  var ACC = { cpt:'#E1352A', fin:'#F0B31C', hum:'#1FB0C4' };
-  var charts = {};
-
-  function paint(){
-    var acc = getComputedStyle(body).getPropertyValue('--acc').trim();
-    if (charts.radar){
-      var d = charts.radar.data.datasets[0];
-      d.borderColor = acc; d.pointBackgroundColor = acc; d.backgroundColor = acc + '2E';
-      charts.radar.update('none');
-    }
-    if (charts.bars){ charts.bars.data.datasets[0].backgroundColor = [acc, acc + 'B3', acc + '66']; charts.bars.update('none'); }
-    if (charts.donut){ charts.donut.data.datasets[0].backgroundColor = [acc, acc + 'CC', acc + '99', acc + '66', '#15151A']; charts.donut.update('none'); }
-  }
-
-  function counters(scope){
-    (scope || document).querySelectorAll('[data-count]').forEach(function(el){
-      var target = parseInt(el.dataset.count,10),
-          sfx = el.dataset.suffix || '', pfx = el.dataset.prefix || '';
-      if (reduce){ el.textContent = pfx + target + sfx; return; }
-      var t0 = null, dur = 850;
-      function step(ts){
-        if (!t0) t0 = ts;
-        var k = Math.min((ts - t0)/dur, 1);
-        el.textContent = pfx + Math.round(target * (1 - Math.pow(1-k,3))) + (k === 1 ? sfx : '');
-        if (k < 1) requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
-    });
-  }
-
-  function set(a, animate){
-    body.setAttribute('data-angle', a);
-    tabs.forEach(function(t){ t.setAttribute('aria-selected', String(t.dataset.set === a)); });
-    var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', ACC[a] || '#111114');
-    try { history.replaceState(null, '', '#' + a); } catch(e){}
-    if (animate && !reduce && wipe){ wipe.classList.remove('go'); void wipe.offsetWidth; wipe.classList.add('go'); }
-    counters(document.querySelector('.kpis[data-for~="' + a + '"]'));
-    paint();
-  }
-
-  /* ---- intro et portes ---- */
-  var intro = document.getElementById('intro'), doors = document.getElementById('doors');
-  function hide(el, instant){
-    if (!el || el.classList.contains('done')) return;
-    if (instant || reduce){ el.classList.add('done'); return; }
-    el.classList.add('out');
-    setTimeout(function(){ el.classList.add('done'); }, 520);
-  }
-  var seen = false;
-  try { seen = !!sessionStorage.getItem('iv'); if (!seen) sessionStorage.setItem('iv','1'); } catch(e){}
-  function playIntro(){
-    if (!intro) return;
-    var seq = intro.querySelectorAll('[data-seq]');
-    var times = [350, 900, 1550, 2000, 2450, 3050];
-    seq.forEach(function(el, i){ setTimeout(function(){ el.classList.add('on'); }, times[i] || 3200); });
-    setTimeout(function(){ hide(intro); }, 4400);
-  }
-  if (intro){
-    var sk = document.getElementById('skip');
-    if (sk) sk.addEventListener('click', function(){ hide(intro); });
-    intro.addEventListener('wheel', function(){ hide(intro); }, { passive:true });
-    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') hide(intro); });
-  }
-  if (doors){
-    doors.querySelectorAll('.door').forEach(function(d){
-      d.addEventListener('click', function(){ hide(doors); set(d.dataset.set, true); });
-    });
-    var qp = document.getElementById('quickpdf');
-    if (qp) qp.addEventListener('click', function(){ window.print(); });
-  }
-  (function(){
-    var c = document.getElementById('stars');
-    if (!c || reduce || !c.getContext) return;
-    var ctx = c.getContext('2d'), pts = [];
-    function size(){ c.width = innerWidth; c.height = innerHeight; }
-    size(); addEventListener('resize', size);
-    for (var i = 0; i < 70; i++) pts.push({ x:Math.random(), y:Math.random(), s:Math.random()*1.6+.4, v:Math.random()*.0005+.00015 });
-    (function tick(){
-      if (!intro || intro.classList.contains('done')) return;
-      ctx.clearRect(0,0,c.width,c.height);
-      ctx.fillStyle = 'rgba(225,53,42,.55)';
-      for (var i = 0; i < pts.length; i++){
-        var p = pts[i]; p.y -= p.v; if (p.y < 0) p.y = 1;
-        ctx.fillRect(p.x*c.width, p.y*c.height, p.s, p.s);
-      }
-      requestAnimationFrame(tick);
-    })();
-  })();
-
-  tabs.forEach(function(t){ t.addEventListener('click', function(){ set(t.dataset.set, true); }); });
-  var h = (location.hash || '').replace('#','');
-  if (['cpt','fin','hum'].indexOf(h) > -1){
-    hide(intro, true); hide(doors, true); set(h, false);
-  } else {
-    counters(document.querySelector('.kpis[data-for~="cpt"]'));
-    if (reduce || seen) hide(intro, true); else playIntro();
-  }
-  document.getElementById('print').addEventListener('click', function(){ window.print(); });
-
-  var items = document.querySelectorAll('.reveal');
-  if (reduce || !('IntersectionObserver' in window)){
-    items.forEach(function(el){ el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function(en){
-      en.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold:.1 });
-    items.forEach(function(el){ io.observe(el); });
-  }
-
-  window.addEventListener('load', function(){
-    if (typeof Chart === 'undefined') return;
-    Chart.defaults.font.family = "'IBM Plex Mono', monospace";
-    Chart.defaults.font.size = 10;
-    Chart.defaults.color = '#5E5E68';
-    var anim = reduce ? false : { duration: 850 }, trait = '#D5D3CC', encre = '#15151A';
-
-    charts.radar = new Chart(document.getElementById('radar'), {
-      type:'radar',
-      data:{ labels:['Achats et fournisseurs','Ventes et clients','Immobilisations','Trésorerie','Fiscalité et TVA','Clôture et comptes annuels','Analytique et subsides'],
-        datasets:[{ data:[4,3,3,4,3,4,4], borderWidth:2, pointRadius:3 }] },
-      options:{ maintainAspectRatio:false, animation:anim,
-        plugins:{ legend:{display:false}, tooltip:{ callbacks:{ label:function(c){ return ['','notions','opérationnel','autonome','référent'][c.raw]; } } } },
-        scales:{ r:{ min:0, max:4, ticks:{ stepSize:1, display:false }, grid:{color:trait}, angleLines:{color:trait}, pointLabels:{ font:{size:9}, color:encre } } } }
-    });
-
-    charts.bars = new Chart(document.getElementById('bars'), {
-      type:'bar',
-      data:{ labels:['Reporting trésorerie','Traitement du reporting','Cycle de clôture'],
-        datasets:[{ data:[97,30,10], borderWidth:0, barThickness:26 }] },
-      options:{ indexAxis:'y', maintainAspectRatio:false, animation:anim,
-        plugins:{ legend:{display:false}, tooltip:{ callbacks:{ label:function(c){ return '−' + c.raw + ' % de temps'; } } } },
-        scales:{ x:{ min:0, max:100, grid:{color:trait}, ticks:{ callback:function(v){ return v + ' %'; } } },
-                 y:{ grid:{display:false}, ticks:{ color:encre, font:{size:9.5} } } } }
-    });
-
-    charts.donut = new Chart(document.getElementById('donut'), {
-      type:'doughnut',
-      data:{ labels:['Comptabilité et clôtures','Reporting et budgets','Trésorerie et paiements','Subsides et audits','Encadrement et procédures'],
-        datasets:[{ data:[35,25,20,12,8], borderColor:'#FFFFFF', borderWidth:2 }] },
-      options:{ maintainAspectRatio:false, cutout:'58%', animation:anim,
-        plugins:{ legend:{ position:'bottom', labels:{ boxWidth:9, padding:8, font:{size:9} } },
-          tooltip:{ callbacks:{ label:function(c){ return c.label + ' : ' + c.raw + ' %'; } } } } }
-    });
-
-    paint();
-  });
-})();
-</script>
+<script src="data/profile.js"></script>
+<script src="data/cv-manifest.js"></script>
+<script src="data/case-studies.js"></script>
+<script src="content/fr.js"></script>
+<script src="content/en.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
